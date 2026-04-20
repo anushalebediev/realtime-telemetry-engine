@@ -13,7 +13,7 @@ install:
 # --- Utility Commands ---
 
 # Wipe the Nx cache and remove Docker volumes
-clean: down
+clean:
 	npx nx reset
 	rm -rf node_modules
 	npm install

@@ -50,7 +50,6 @@
       "dependsOn": ["build"],
       "options": {
         "buildTarget": "telemetry-gateway:build",
-        "port": 3000,
         "runBuildTargetDependencies": false
       },
       "configurations": {

@@ -42,3 +42,6 @@ Thumbs.db
 .claude/worktrees
 .claude/settings.local.json
 .editorconfig
+
+vite.config.*.timestamp*
+vitest.config.*.timestamp*

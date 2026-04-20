@@ -4,6 +4,9 @@
   "projectType": "application",
   "implicitDependencies": ["telemetry-gateway"],
   "targets": {
+    "test": {
+      "dependsOn": ["telemetry-gateway:serve"]
+    },
     "e2e": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{e2eProjectRoot}"],

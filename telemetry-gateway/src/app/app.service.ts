@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 @Injectable()
 export class AppService {
   
-  public streamMetrics(intervalMs: number = 5000): Observable<SystemMetrics> {
+  public streamMetrics(intervalMs = 5000): Observable<SystemMetrics> {
     return timer(0, intervalMs).pipe(
       map(() => this.generateMockMetrics())
     );

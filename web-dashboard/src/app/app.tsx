@@ -1,7 +1,7 @@
-import { gatewayConnect } from './gatewayconnect';
+import { useGatewayConnect } from './gatewayconnect';
 
 export function App() {
-  const { metrics, isConnected } = gatewayConnect();
+  const { metrics, isConnected } = useGatewayConnect();
 
   // Helper function to color-code the status
   const getStatusColor = (status?: string) => {

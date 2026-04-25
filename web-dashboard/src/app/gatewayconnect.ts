@@ -4,7 +4,7 @@ import { SystemMetrics } from '@realtime-telemetry-engine/shared-types';
 
 const GATEWAY_URL = 'http://localhost:3000';
 
-export const gatewayConnect = () => {
+export const useGatewayConnect = () => {
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
   const [isConnected, setIsConnected] = useState<boolean>(false);
 

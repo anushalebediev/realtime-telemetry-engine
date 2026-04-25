@@ -6,7 +6,7 @@ import * as GatewayConnect from './gatewayconnect';
 describe('Dashboard App Component', () => {
   it('should render the disconnected and loading state initially', () => {
     // force the hook to simulate a disconnected state without data
-    vi.spyOn(GatewayConnect, 'gatewayConnect').mockReturnValue({
+    vi.spyOn(GatewayConnect, 'useGatewayConnect').mockReturnValue({
       metrics: null, 
       isConnected: false,
     });
@@ -20,7 +20,7 @@ describe('Dashboard App Component', () => {
 
   it('should render the metrics dashboard when data is actively flowing', () => {
     // force the hook to simulate a live, connected state with mock data
-    vi.spyOn(GatewayConnect, 'gatewayConnect').mockReturnValue({
+    vi.spyOn(GatewayConnect, 'useGatewayConnect').mockReturnValue({
       metrics: {
         timestamp: 1713990626000,
         cpuUsage: 42,

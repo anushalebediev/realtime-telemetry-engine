@@ -26,6 +26,14 @@ test.describe('web-dashboard', () => {
       await expect(page.locator('text=CPU Usage')).toBeVisible();
       await expect(page.locator('text=Memory')).toBeVisible();
       await expect(page.locator('text=System Status')).toBeVisible();
+      // verify chart rendered successfully
+      await expect(page.locator('text=CPU Utilization History')).toBeVisible();
+      // verify Recharts successfully generated the container wrapper
+      const chartWrapper = page.locator('.recharts-wrapper');
+      await expect(chartWrapper).toBeVisible();
+      // verify the actual SVG surface was drawn on the screen
+      const chartSvg = page.locator('.recharts-surface');
+      await expect(chartSvg).toBeVisible();
     }
   });
 });

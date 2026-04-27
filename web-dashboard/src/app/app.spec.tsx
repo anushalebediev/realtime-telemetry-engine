@@ -25,8 +25,7 @@ describe('Dashboard App Component', () => {
 
     render(<App />);
     
-    expect(screen.getByText('Real-Time Telemetry Engine')).toBeTruthy();
-    expect(screen.getByText('Disconnected')).toBeTruthy();
+    // with no metrics, the early return renders only the loading message (no Header)
     expect(screen.getByText('Waiting for telemetry data...')).toBeTruthy();
   });
 

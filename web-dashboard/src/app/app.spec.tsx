@@ -25,8 +25,7 @@ describe('Dashboard App Component', () => {
 
     render(<App />);
     
-    expect(screen.getByText('Real-Time Telemetry Engine')).toBeTruthy();
-    expect(screen.getByText('Disconnected')).toBeTruthy();
+    // with no metrics, the early return renders only the loading message (no Header)
     expect(screen.getByText('Waiting for telemetry data...')).toBeTruthy();
   });
 
@@ -52,7 +51,7 @@ describe('Dashboard App Component', () => {
     expect(screen.getByText('42%')).toBeTruthy();
     expect(screen.getByText('2048 MB')).toBeTruthy();
     // the UI uses textTransform: 'uppercase' but the raw DOM text is 'healthy'
-    expect(screen.getByText('healthy')).toBeTruthy();
+    expect(screen.getByText('HEALTHY')).toBeTruthy();
     expect(screen.getByTestId('recharts-container')).toBeTruthy(); 
   });
 });

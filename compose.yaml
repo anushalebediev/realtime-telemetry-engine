@@ -1,0 +1,20 @@
+services:
+  telemetry-gateway:
+    build:
+      context: .
+      dockerfile: telemetry-gateway/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+
+  web-dashboard:
+    build:
+      context: .
+      dockerfile: web-dashboard/Dockerfile
+    ports:
+      - "4200:80"
+    depends_on:
+      - telemetry-gateway
+    restart: unless-stopped

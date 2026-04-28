@@ -44,7 +44,10 @@ The easiest way to spin up both the telemetry backend and the React dashboard is
 
 3. Access the application:
     - Dashboard: [localhost:4200](http://localhost:4200/)
+    ![Screenshot of web-dashboard showing metrics and cpu utilization in a chart](/assets/images/web-dashboard.png)
     - API / WebSocket: [localhost:3000/api](http://localhost:3000/api)
+    ![Screenshot of gateway api as seen on Postman](/assets/images/telemetry-gateway-api.png)
+    
 
 ### Local Development (Nx)
 
